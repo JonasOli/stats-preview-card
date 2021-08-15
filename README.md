@@ -2,10 +2,9 @@
 
 Project from [Frontend Mentor](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62)
 
-Developed using
+Responsive design developed using
 - HTML
 - SCSS
-- Responsive
 
 How to run
 - yarn
