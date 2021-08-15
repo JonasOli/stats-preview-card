@@ -6,3 +6,7 @@ Developed using
 - HTML
 - SCSS
 - Responsive
+
+How to run
+- yarn
+- yarn start
