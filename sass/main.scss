@@ -1,0 +1,142 @@
+@import "./reset.scss";
+
+$dark-blue: hsl(233, 47%, 7%);
+$desaturated-blue: hsl(244, 38%, 16%);
+$soft-violet: hsl(277, 64%, 61%);
+$white: hsl(0, 0%, 100%);
+$white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+$white-stat-headings: hsla(0, 0%, 100%, 0.6);
+
+.stats-preview-card-container {
+  background-color: $dark-blue;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+
+  .stats-preview-card {
+    font-family: "Inter", sans-serif;
+    color: $white;
+    background-color: $desaturated-blue;
+    border-radius: 4px;
+    margin: 3rem auto;
+    overflow: hidden;
+    font-size: 1.5rem;
+    width: 35.5rem;
+
+    &__image {
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      &--overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(170, 92, 219, 0.9);
+        mix-blend-mode: multiply;
+      }
+    }
+
+    &__content {
+      padding: 4rem 3rem;
+
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 700;
+
+        strong {
+          color: $soft-violet;
+        }
+      }
+
+      .text {
+        font-size: 1.5rem;
+        text-align: center;
+        color: $white-main-paragraph;
+        line-height: 1.5;
+        padding: 2rem 0;
+      }
+
+      .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .card {
+          text-align: center;
+          line-height: 1.5;
+
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+          }
+
+          &__heading {
+            color: $white;
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+          }
+
+          &__text {
+            text-transform: uppercase;
+            color: $white-stat-headings;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 56.25em) {
+    .stats-preview-card {
+      width: 54rem;
+    }
+  }
+
+  @media only screen and (min-width: 75em) {
+    html {
+      font-size: 80%;
+    }
+
+    .stats-preview-card {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "conteudo image";
+      width: 100rem;
+      margin: auto;
+
+      &__image {
+        grid-area: image;
+      }
+
+      &__content {
+        padding: 6.8rem 5rem;
+        grid-area: conteudo;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+
+        h1,
+        .text,
+        .card {
+          text-align: left;
+        }
+
+        .cards {
+          flex-direction: row;
+
+          .card:not(:last-child) {
+            margin-bottom: 0;
+            margin-right: 4rem;
+          }
+        }
+      }
+    }
+  }
+}
