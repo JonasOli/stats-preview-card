@@ -170,7 +170,8 @@ html {
       .stats-preview-card-container .stats-preview-card__content h1 {
         font-size: 3rem;
         text-align: center;
-        font-weight: 700; }
+        font-weight: 700;
+        line-height: 1.2; }
         .stats-preview-card-container .stats-preview-card__content h1 strong {
           color: #aa5cdb; }
       .stats-preview-card-container .stats-preview-card__content .text {
@@ -206,7 +207,7 @@ html {
       display: grid;
       grid-template-columns: 50% 50%;
       grid-template-areas: "conteudo image";
-      width: 100rem;
+      width: 110rem;
       margin: auto; }
       .stats-preview-card-container .stats-preview-card__image {
         grid-area: image; }
@@ -217,11 +218,12 @@ html {
         flex-direction: column;
         row-gap: 3rem; }
         .stats-preview-card-container .stats-preview-card__content h1,
-        .stats-preview-card-container .stats-preview-card__content .text,
-        .stats-preview-card-container .stats-preview-card__content .card {
+        .stats-preview-card-container .stats-preview-card__content .text {
           text-align: left; }
         .stats-preview-card-container .stats-preview-card__content .cards {
           flex-direction: row; }
-          .stats-preview-card-container .stats-preview-card__content .cards .card:not(:last-child) {
-            margin-bottom: 0;
-            margin-right: 4rem; } }
+          .stats-preview-card-container .stats-preview-card__content .cards .card {
+            text-align: left; }
+            .stats-preview-card-container .stats-preview-card__content .cards .card:not(:last-child) {
+              margin-bottom: 0;
+              margin-right: 4rem; } }

@@ -51,6 +51,7 @@ $white-stat-headings: hsla(0, 0%, 100%, 0.6);
         font-size: 3rem;
         text-align: center;
         font-weight: 700;
+        line-height: 1.2;
 
         strong {
           color: $soft-violet;
@@ -109,7 +110,7 @@ $white-stat-headings: hsla(0, 0%, 100%, 0.6);
       display: grid;
       grid-template-columns: 50% 50%;
       grid-template-areas: "conteudo image";
-      width: 100rem;
+      width: 110rem;
       margin: auto;
 
       &__image {
@@ -124,17 +125,20 @@ $white-stat-headings: hsla(0, 0%, 100%, 0.6);
         row-gap: 3rem;
 
         h1,
-        .text,
-        .card {
+        .text {
           text-align: left;
         }
 
         .cards {
           flex-direction: row;
 
-          .card:not(:last-child) {
-            margin-bottom: 0;
-            margin-right: 4rem;
+          .card {
+            text-align: left;
+
+            &:not(:last-child) {
+              margin-bottom: 0;
+              margin-right: 4rem;
+            }
           }
         }
       }
