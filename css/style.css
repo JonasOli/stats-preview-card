@@ -126,21 +126,31 @@ table {
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 .stats-preview-card-container {
   background-color: #090b1a;
-  width: 100vw;
+  min-width: 100vw;
   min-height: 100vh;
-  display: flex; }
+  display: flex;
+  align-items: center;
+  justify-content: center; }
   .stats-preview-card-container .stats-preview-card {
     font-family: "Inter", sans-serif;
     color: white;
     background-color: #1b1938;
     border-radius: 4px;
-    margin: 3rem auto;
     overflow: hidden;
     font-size: 1.5rem;
-    width: 35.5rem; }
+    width: min(90vw, 355px); }
     .stats-preview-card-container .stats-preview-card__image {
       position: relative; }
       .stats-preview-card-container .stats-preview-card__image img {

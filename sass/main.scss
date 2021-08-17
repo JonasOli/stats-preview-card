@@ -9,19 +9,20 @@ $white-stat-headings: hsla(0, 0%, 100%, 0.6);
 
 .stats-preview-card-container {
   background-color: $dark-blue;
-  width: 100vw;
+  min-width: 100vw;
   min-height: 100vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   .stats-preview-card {
     font-family: "Inter", sans-serif;
     color: $white;
     background-color: $desaturated-blue;
     border-radius: 4px;
-    margin: 3rem auto;
     overflow: hidden;
     font-size: 1.5rem;
-    width: 35.5rem;
+    width: #{"min(90vw, 355px)"};
 
     &__image {
       position: relative;
